@@ -9,6 +9,7 @@ group :test, :darwin, :development do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'capybara-screenshot'
+  gem 'faker'
 end
 
 
