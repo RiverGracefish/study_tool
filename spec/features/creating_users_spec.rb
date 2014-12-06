@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 feature 'Creating Users' do
   scenario 'allows existing users to login' do
     user = FactoryGirl.create(:user)

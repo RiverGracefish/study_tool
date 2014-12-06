@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'sessions#homepage'
   resources :users
-  # get 'exercise' => 'StudyExercise#Study_Exercise'
+  # get 'study_exercise' => 'StudyExerciseController#study'
 
   get 'login' => 'sessions#login'
   post '/login' => 'sessions#create'
