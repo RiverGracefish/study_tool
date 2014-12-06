@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'sessions#homepage'
   resources :users
-  # get 'study_exercise' => 'StudyExerciseController#study'
+  get 'study_exercises' => 'study_exercises#study_exercises'
+  get 'ruby_on_rails_exercises' => 'study_exercises#ruby_on_rails_exercises'
+  get 'updated_content' => 'study_exercises#updated_content'
+  get 'lrthw' => 'study_exercises#lrthw'
 
   get 'login' => 'sessions#login'
   post '/login' => 'sessions#create'
