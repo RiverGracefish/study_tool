@@ -17,12 +17,14 @@ feature 'Verify links' do
   #   expect(page).to have_content('Typing Practice for Programmers')
   # end
 
-  scenario 'go to Ruby on Rails Exercises link' do
-    visit ruby_on_rails_exercises_path
-
-    expect(page).to have_link('How do I get updated class content?')
-    expect(page).to have_link('Learn Ruby the Hard Way')
-  end
+  # scenario 'go to Ruby on Rails Exercises link' do
+  #   visit ruby_on_rails_exercises_path
+  #
+  #   expect(page).to have_link('How do I get updated class content?')
+  #   expect(page).to have_link('Learn Ruby the Hard Way')
+  #   expect(page).to have_link('Numbers, Letters and Variables Exercises')
+  #   expect(page).to have_link('Methods and Flow Control')
+  # end
 
   scenario 'go to updated class content link' do
     visit updated_content_path
@@ -37,34 +39,30 @@ feature 'Verify links' do
   # scenario 'go to Learn Ruby the Hard Way link' do
   #   visit lrthw_path
   #
-  #   expect(page).to have_link('Learn Ruby the Hard Way')
-  #   click_link('Learn Ruby the Hard Way')
   #   expect(page).to have_text('How do I start?')
-  #   click_button 'Show Hint'
   #   expect(page).to have_text('Go to homework assignments directory')
   #   click_button 'Show Answer'
   #   expect(page).to have_text('>>cd ~/workspace/davinici_coders_*class session*_*class year*/homework_assignments')
-  #   click_button 'Show Hint'
   #   expect(page).to show_text('Making directory "lrthw_exercises"')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('>>mkdir lrthw_exercises')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Go into the directory')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('cd lrthw_exercises')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Set up RVM to load version "2.1.2" for this directory')
   #   click_button 'Show Answer'
   #   expect(page).to show_text(">>echo '2.1.2' > .ruby-version")
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Set up RVM to load gemsets for this directory')
   #   click_button 'Show Answer'
   #   expect(page).to show_text(">>echo 'lrthw_exercises' > .ruby-gemset")
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Reload RVM Setting')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('>>cd .')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Load current directory in RubyMine')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('>>mine .')
@@ -74,7 +72,7 @@ feature 'Verify links' do
   #   visit rubocop_path
   #
   #   expect(page).to show_text('How do I set up Rubocop for lrthw?')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Go to Gemfile set up source and gem, then bundle and run Rubocop.')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('In RubyMine/Gemfile')
@@ -82,16 +80,16 @@ feature 'Verify links' do
   #   expect(page).to show_text('2|')
   #   expect(page).to show_text("3|gem 'guard-rubocop'")
   #   expect(page).to show_text('4|')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Bundle!')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('In Terminal')
   #   expect(page).to show_text('>>bundle')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Initialize Guard')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('>>guard init')
-  #   click_button 'Show Hint'
+
   #   expect(page).to show_text('Run Guard')
   #   click_button 'Show Answer'
   #   expect(page).to show_text('>>guard')

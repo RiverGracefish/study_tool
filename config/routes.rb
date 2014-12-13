@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get 'ruby_on_rails_exercises' => 'study_exercises#ruby_on_rails_exercises'
   get 'updated_content' => 'study_exercises#updated_content'
   get 'lrthw' => 'study_exercises#lrthw'
+  get 'number_letters_and_variables' => 'study_exercises#number_letters_and_variables'
+  get 'methods_and_flow_control' => 'study_exercises#methods_and_flow_control'
+  get 'git_101' => 'study_exercises#git_101'
+  get 'git_102' => 'study_exercises#git_102'
+
+  get 'useful_sources' => 'useful_sources#useful_sources'
+  get 'build_my_brand' => 'useful_sources#build_my_brand'
 
   get 'login' => 'sessions#login'
   post '/login' => 'sessions#create'

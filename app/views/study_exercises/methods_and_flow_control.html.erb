@@ -1,0 +1,197 @@
+<h1> Methods and Flow Control </h1>
+
+<h2> Set Up</h2>
+<ul style="list-style: none;">
+  <li><p> In the Terminal, type in the following: </p></li>
+  <li><p>>>cd ~/workspace/davinci_coders_*class session*_*class year*/in_class_projects </p></li>
+  <li><p>>>mkdir methods_and_flow_control </p></li>
+  <li><p>>>cd methods_and_flow_control </p></li>
+  <li><p>>>mine . </p></li>
+</ul>
+
+<h2> Ruby Review</h2>
+<ul style="list-style: none;">
+  <li><p> Click on methods_and_flow_control in project view </p></li>
+  <li><p> Cmnd-N(opens new menu), select file and name it "practice_methods.rb" </p></li>
+</ul>
+
+<h2> What is a Method?</h2>
+<ul style="list-style: none;">
+  <li><p> Methods are a bunch of commands that "do stuff" and return a value </p></li>
+  <li><p> Think of Objects as Nouns and methods like verbs </p></li>
+  <li><p> --Drive the car (car.drive) </p></li>
+  <li><p> --Change the oil (car.change_oil) </p></li>
+</ul>
+
+<h2> String Methods </h2>
+<ul style="list-style: none;">
+  <li><h3> Ruby has documentation for built in classes like String(http://www.ruby-doc.org/core-2.1.3/String.html) </h3></li>
+  <li><p> --Bookmark the following webs, you will use them a lot: </p></li>
+  <li><p> 1)http://ruby-doc.org/ </p></li>
+  <li><p> 2)http://api.rubyonrails.org/ </p></li>
+  <li><p> 3)http://apidock.com/ </p></li>
+  <li><h3><b> Let's play with some string methods </b></h3></li>
+  <li><p> In RubyMine, type in the following: </p></li>
+  <pre>#!/usr/bin/env ruby
+
+puts "Ruby is my favorite."
+puts "Ruby is my favorite.".reverse
+puts "Ruby is my favorite.".capitalize
+puts "RUBY IS MY FAVORITE.".capitalize
+puts "Ruby is my favorite.".downcase
+puts "Ruby is my favorite.".upcase
+puts "Ruby is my favorite.".length
+puts "Ruby is my favorite.".gsub("my", "your")
+puts "Ruby is my favorite.".include("Ruby") </pre>
+  <li><p><b> RUN </b></p></li>
+  <pre>Ruby is my favorite.
+.etirovaf ym si ybuR
+Ruby is my favorite.
+Ruby is my favorite.
+ruby is my favorite.
+RUBY IS MY FAVORITE.
+20
+Ruby is your favorite.
+true</pre>
+</ul>
+
+<h2> IRB practice </h2>
+<ul style="list-style: none;">
+  <li><h3> How long is the string "I love Ruby"?</h3></li>
+  <li><p> "I love Ruby".length    #=> 11</p></li>
+  <li><h3> What is "ybuR evol I" backwards? </h3></li>
+  <li><p> "ybuR evol I".reverse    #=> "I love Ruby" </p></li>
+  <li><h3> Are methods chainable? </h3></li>
+  <li><p> "I love Ruby".reverse.reverse    #=> "I love Ruby" </p></li>
+  <li><h3> What other String methods should we play with? </h3></li>
+  <li><h3> How do we find all the methods available for an object? </h3></li>
+  <li><p> "I love Ruby".methods.sort </p></li>
+</ul>
+
+<h2> Flow Control </h2>
+<ul style="list-style: none;">
+  <li><p>puts 5 > 3    #=> true </p></li>
+  <li><p>puts 3 > 5    #=> false </p></li>
+  <li><p>puts 5 >= 3    #=> true </p></li>
+  <li><p>puts 5 >= 5    #=> true </p></li>
+  <li><p>puts 3 >= 5    #=> false </p></li>
+  <li><p>puts 3 == 5    #=> false </p></li>
+  <li><p>puts 3 != 5    #=> true </p></li>
+  <li><p>puts 3 == 3    #=> true </p></li>
+  <li><p>--number_of_tires = 4 </p></li>
+  <li><p>number_of_tires == 4    #=> true </p></li>
+  <li><p>number_of_tires == 5    #=> false </p></li>
+  <li><p>number_of_tires = 5    #=> truthy(5) </p></li>
+  <li><h3>When comparing values, you should always be using == </h3></li>
+</ul>
+
+<h2> Branching </h2>
+
+<ul style="list-style: none;"><pre>
+   if ________
+     #________was truthy
+   else
+     #________was falsey
+   end </pre>
+  <li><h3>In Ruby, only nil and false are falsey, anything else is truthy</h3></li>
+</ul>
+
+<h2> Looping </h2>
+<ul style="list-style: none;">
+  <li><h3>Loops allow you to tell the program to do something over and over</h3></li>
+  <li><h3>Make sure you tell it when to stop</h3></li>
+  <pre> input = ''
+   while input != 'bye'
+        input = gets.chomp
+        puts input
+    end </pre>
+</ul>
+
+<h2> Breaking out of Loops </h2>
+<ul style="list-style: none;">
+  <li><p> You can use 'break' to exit out of loop </p></li>
+  <pre>
+    count = 0
+    while 5 == 5
+          puts "5 still equals 5"
+          count += 1
+    end
+  </pre>
+  <li><p> Use Control-C to break out of infinite loops </p></li>
+</ul>
+
+<h2> If elsif and else if </h2>
+<ul style="list-style: none;">
+  <pre>
+    if ________
+          ________
+      elsif ________
+          ________
+    else
+      ________
+    end
+  </pre>
+</ul>
+
+<h2> || and && </h2>
+<ul style="list-style: none;">
+  <li><p> || returns the true if either side is true </p></li>
+  <li><output> if a||b # Only false if both a and b are false</output></li>
+  <li><p> && returns true if both sides are true </p></li>
+  <li><output> if a && b # Only true if both a and b are true</output></li>
+  <li><p> if name == 'John' && age <= 32 </p></li>
+  <li><p> if name == 'John' || age <= 32 </p></li>
+</ul>
+
+<h2> two_bee or !two_bee </h2>
+<ul style="list-style: none;">
+  <li><p> ! inverses the test </p></li>
+  <li><output>if name == 'John'    #=> The name is John</output></li>
+  <li><output>if name != 'John'    #=> The name is not John</output></li>
+  <li><p> You can use unless, but most times you shouldn't < /personal_opinion ></p></li>
+  <li><output>unless name == 'John'</output></li>
+  <li><output>if name != 'John'</output></li>
+  <li><p> Please don't ever use unless with && or ||. It's just too hard to figure out what's going on. </p></li>
+</ul>
+
+<h1> Homework!!!!</h1>
+<ul style="list-style: none;">
+  <li><p> >>cd ~/workspace/davinci_coders_*class session*_*class year*/homework_assignments/homework_assignments</p></li>
+  <li><p> >>mkdir methods_and_flow_control</p></li>
+  <li><p> >>cd methods_and_flow_control</p></li>
+  <li><p> >>mine .</p></li>
+</ul>
+
+<h1> Homework # 1 </h1>
+<ul style="list-style: none;">
+  <li><p> create a program called "string_practice.rb" </p></li>
+  <li><p> create a variable with the string "this is a string to practice with" </p></li>
+  <li><p> When string_practice.rb is run, it should print out the following strings</p></li>
+  <pre>
+    this is a string to practice with
+    This is a string to practice with
+    THIS IS A STRING TO PRACTICE WITH
+    This is a 'string' to practice with
+    The string 'this is a string to practice with' has 33 characters
+    htiw ecitcarp ot gnirts a si siht
+    practice practice practice!
+  </pre>
+</ul>
+
+<h1> Homework # 2 </h1>
+<ul style="list-style: none;">
+  <li><p> There is a common interview question called FizzBuzz. For this homework assignment, implement FizzBuzz. </p></li>
+  <li><p> Create a program called "fizz_buzz.rb" </p></li>
+  <li><p> This program should output the numbers 1 through 100, however: </p></li>
+  <li><output> If evenly divisible by 3, print Fizz</output></li>
+  <li><output> If evenly divisible by 5, print Buzz</output></li>
+  <li><output> If evenly divisible by 3 and 5, print FizzBuzz</output></li>
+  <li><output> Otherwise, print out the number</output></li>
+</ul>
+
+<h2> Commit your work </h2>
+<ul style="list-style: none;">
+  <pre> As you go through your homework, make sure you commit your work (using Git).
+    Push the changes to git github before you click finish on the story in Pivotal Tracker.
+  </pre>
+</ul>
