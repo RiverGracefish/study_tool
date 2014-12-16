@@ -26,8 +26,8 @@
     <tbody>
     <tr>
       <td>
-        <p id="openpara"><h2>This is a Study Tool create by Grace River Yu,
-          a DaVinici student of building the toolbelt of junior Ruby on Rails developer with Jason Noble.
+        <p id="openpara"><h2>This is a Study Tool create by <%= link_to 'Grace River Yu', asset_path('GraceRiverYu.jpg') %>,
+          a DaVinici student of building the toolbelt of junior Ruby on Rails developer with <%= link_to 'Jason Noble', asset_path('JasonNoble.jpg') %>.
           I want to help other developer students study while improving my programming skills.
           Please feel free to use my web, and give me free back. Thanks.</h2></p>
       </td>
@@ -35,23 +35,7 @@
     </tbody>
   </table>
 
-<!--<li class="active"><a href="<%= image_tag '' %>">Grace River Yu</a></li>-->
-
-<p>Grace River Yu</p>
+<li class="active"><%= link_to 'Grace River Yu', asset_path('GraceRiverYu.jpg') %></li>
 <p>grace.yu4444@gmail.com</p>
 <a href="http://rivergracefish.wordpress.com/">Visit Grace's Wordpress!</a><br/>
 <a href="https://github.com/RiverGracefish">Visit Grace's Github!</a>
-
-        <!--<ul id="smallmenu">-->
-          <!--<li><button type="button" class="linkblock">Study Exercises</button></li>-->
-          <!--<li><button type="button" class="linkblock">Users List</button> </li>-->
-          <!--<li><button type="button" class="linkblock">Useful Sources</button></li>-->
-          <!--<li><button type="button" class="linkblock">Copper</button></li>-->
-          <!--<li><button type="button" class="linkblock">Crested Butte</button></li>-->
-        <!--</ul>-->
-
-
-        <!--<script type="link/javascript">-->
-
-          <!--//variable definitions for descriptive text-->
-          <!--var v_Study Exercises_link = "study_exercises_path"-->

@@ -10,29 +10,12 @@
 
 <h2> Git has three "areas" </h2>
 <ul style="list-style: none;">
-  <pre>
-    Working directory      Staging area      Git directory(repository)
-          ||                    ||                      ||
-          ||         Checkout the project               ||
-          ||<-------------------------------------------||
-          ||                    ||                      ||
-          ||  Stage files       ||                      ||
-          ||------------------->||                      ||
-          ||                    ||                      ||
-          ||                    ||       Commit         ||
-          ||                    ||--------------------->||
-          ||                    ||                      ||
-  </pre>
+  <%= image_tag 'Git3areas.png' %>                    ||                      ||
 </ul>
 
 <h2> Git Workflow </h2>
 <ul style="list-style: none;">
-  <pre>
-            Modify Files
-            /          \
-           /            \
-     Commit Files -- Stage Files
-  </pre>
+  <%= image_tag 'GitWorkflow.png' %>
 </ul>
 
 <h2> Git Setup </h2>
@@ -75,13 +58,8 @@
 <h4> Is there a command to see what we are committed? </h4>
 
 <h2> Working with Remote Repos</h2>
-<pre>
-   -------------------                 -----------------------
-  | Public Repo       |  git pull     | Private Repo          |
-  | Located on Server |-------------->| Located on your       |
-  | (Github)          |<--------------| local machine         |
-  |___________________|     git push  |_______________________|
-</pre>
+<%= image_tag 'WorkingWithRemoteRepos.png' %>
+
 
 <h2> We Setup Github SSH Auth </h2>
 <h4> >>ssh -T git@github.com </h4>

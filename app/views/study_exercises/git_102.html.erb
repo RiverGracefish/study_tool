@@ -4,6 +4,8 @@
 
 <h3>Practice Project</h3>
 <p><%= link_to  'https://github.com/davincicoders/git_fork_practice', 'https://github.com/davincicoders/git_fork_practice'%></p>
+<%= image_tag 'Git102Practice.png' %>
+
 
 <h3>Forking a project</h3>
 <p>Fork is a Github thing, not a Git command</p>
@@ -11,70 +13,47 @@
 <p>This provides you the ability to push/pull to your own copy of the repo, even though you may not have write access to the original repo</p>
 
 <h3>How our Repos are setup</h3>
-<pre>
-   Original Repo                 Your Public Repo
-   ___________________          _____________________
-  | davincicoders/    |  Fork  | your-user-name/     |
-  | git_fork_practice |------->| git_fork_practice   |
-  | (on Github)       |        | (on Github)         |
-  |___________________|        |_____________________|
-                                          |
-                                __________|__________
-                               | git_fork_practice   |
-                               | Local Repo          |
-                               |_____________________|
-</pre>
-<output> (on Github) is Remote Repo; Local Repo is Local Repo</output>
-<p>Other Forks of the Repo</p>
-<pre>DebFrey/git_fork_practice (on Github)</pre>
-<pre>jwilliams722/git_fork_practice (on Github)</pre>
-<pre>jasonnoble/git_fork_practice (on Github)</pre>
+<%= image_tag 'RepoSetup.png' %>
 
 <h3>Let's pull our fork of the repo local</h3>
 <p>If you want a copy of a remote repository available locally, that operation is called clone</p>
 <p>Visit your fork in a browser, make sure SSH is selected, click the clipboard icon.</p>
+<%= image_tag 'PullForkRepoLocal.png' %>
+
 
 <h3>Clone Repo</h3>
+<%= image_tag 'CloneRepo.png' %>
 <output> >>cd ~/workspace/davinci_coders_t2_2014</output>
 <output> >>git clone git@github.com:jasonnoble/git_fork_practice.git</output>
 <output> >>cd git_fork_practice</output>
 <output> >>git remote -v</output>
 
 <h3>Add Upstream</h3>
+<%= image_tag 'AddUpstream.png' %>
 <output> >>git remote add upstream git@github.comidavincicoders/git_fork_practice_git</output>
 <output> >>git remote -v</output>
 <output> >>git remote add remote_name git_repo_url</output>
 
 <h3>Add Tracker Story</h3>
+<%= image_tag 'AddTrackerStory.png' %>
 <h4>Create a Pivotal Tracker Story</h4>
 <p>Description: Add your name to the toolbelt-class-t2-2014.txt file in the repository</p>
 
 <h3>Git branches</h3>
 <h4>Git branches allow you localize changes</h4>
-<pre>
-                  master
-  O--O--O--O--O--O--O
-   \             topic_branch
-    \--O--O--O--O--O
-</pre>
+<%= image_tag 'GitBranches1.png' %>
 <h4>I'm currently on master, how do I create a branch?</h4>
-<pre>
-  You are here                      master
-       0-------------------------------
-</pre>
+<%= image_tag 'GitBranches2.png' %>
 <output><b> >>git checkout -b XXXX_YYYY_ZZZZ</b></output>
 <output> --XXXX = Pivotal Story ID</output>
 <output> --YYYY = Short description</output>
 <output> --ZZZZ = Branch it's based off of</output>
 <output> >>git checkout -b 53680073_add_my_name_master</output>
+<%= image_tag 'GitBranchesTracker.png' %>
 <output> >>git branch     #==>(shows all branches, *=current branch)</output>
+<%= image_tag 'GitBranchesTerminal.png' %>
 <h4>Now we're on the 53680073_add_my_name_master branch</h4>
-<pre>
-                                     master
-       O-------------------------------
-        \You are here               53680073_add_my_name_master
-         \0------------------------------------
-</pre>
+<%= image_tag 'GitBranches3.png' %>
 <h4>We haven't committed anything, but if we do, the commit will end up on the new branch</h4>
 
 <h3>What's next?</h3>
@@ -90,12 +69,7 @@
 
 <h3>Git branches</h3>
 <h4>Our new commit is on the 53689973_add_my_name_master branch</h4>
-<pre>
-                                     master
-       O-------------------------------
-        \You are here               53680073_add_my_name_master
-         \------0------------------------------
-</pre>
+<%= image_tag 'GitBranches4.png' %>
 
 <h3>Pulling in upstream changes</h3>
 <h4> >>git fetch upstream</h4>
@@ -104,39 +78,36 @@
 
 <h3>Fetch finds changes on master</h3>
 <h4>Someone pushed changes to the master branch</h4>
-<pre>
-                                     master
-       O-----O-------------------------
-        \You are here               53680073_add_my_name_master
-         \------0------------------------------
-</pre>
+<%= image_tag 'GitBranches5.png' %>
 
 <h3>Rebase off upstream/master</h3>
-<pre>
-                                     master
-       O-----O-------------------------
-              \
-         You are here               53680073_add_my_name_master
-          ------0------------------------------
-</pre>
+<%= image_tag 'GitBranches6.png' %>
 
 <h3>Handling conflict</h3>
 <h5>Johnny adds his name as line two</h5>
 <h5>Julie adds his name as line two</h5>
+<%= image_tag 'conflict.png' %>
 <h4>Johnny commits his change and pushes it to the upstream master branch, Julie commits, fetches upstream and attempts to rebase upstream/ master</h4>
 <h4>What happens? Merge Conflict!!!!!!</h4>
+<%= image_tag 'MergeConflicts.png' %>
+<%= image_tag 'MergeConflictsShown.png' %>
 
 <h3>Fixing Merge Conflicts</h3>
 <h4><b> >>git mergetool</b></h4>
+<%= image_tag 'mergetool.png' %>
+<%= image_tag 'mergetool0.png' %>
 <h4>Each arrow represents a place where two people changed the same line of code</h4>
 <p>Or at least Git thinks you did</p>
 <h4>You can use the arrow keys to move through the conflicts (Down arrow = Next conflict, Up arrow = Previous Conflict)</h4>
 <h4>As each conflict is highlighted, you can use the arrows (Left arrow choose left, Right arrow choose right) or select an action from the action menu</h4>
+<%= image_tag 'mergetool1.png' %>
 <h4>In this case, we want both changes, so we select the conflict, then select "Choose Both (left first)" from the Action drop down</h4>
 <h4>Hit Cmnd-S to save the file, then hit Cmnd-Q to quit open diff</h4>
+<%= image_tag 'rebase.png' %>
 <h4> >>git rebase --continue</h4>
 
 <h3>On to our next change!</h3>
+<%= image_tag 'nextChange.png' %>
 
 <h3>Classwork</h3>
 <h4>Pair with someone</h4>
@@ -144,3 +115,4 @@
 <h4>Try to pull their changes</h4>
 <h4>Get a merge conflict</h4>
 <h4>Fix it</h4>
+<%= image_tag 'jasonJoke.png' %>
