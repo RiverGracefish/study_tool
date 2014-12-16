@@ -23,6 +23,9 @@ group :production do
   gem 'rails_12factor'
 end
 
+# group :assets do
+#   gem 'jquery-fileupload-rails'
+# end
 
 gem 'bootstrap-generators'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

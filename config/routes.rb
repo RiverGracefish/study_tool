@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'git_102' => 'study_exercises#git_102'
 
   get 'useful_sources' => 'useful_sources#useful_sources'
+  get 'reading_blogs' => 'useful_sources#reading_blogs'
   get 'build_my_brand' => 'useful_sources#build_my_brand'
 
   get 'login' => 'sessions#login'
