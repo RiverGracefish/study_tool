@@ -7,4 +7,7 @@ class UsefulSourcesController < ApplicationController
 
   def build_my_brand
   end
+
+  def pivotal_tracker
+  end
 end
