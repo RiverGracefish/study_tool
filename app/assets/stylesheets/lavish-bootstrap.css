@@ -5911,4 +5911,3 @@ table {width: 900px; height: 368px; border: 2px solid blue; cellpadding: 2px; ce
 ul, li {decoration:none; list-style-type:none; padding: 0px; margin: 0px;}
 #smallmenu {display:block; font-weight:bold; float:left; color:blue; padding:2px; width:1000px;text-align:center; background-color: blue; text-decoration:none;}
 ul#smallmenu li {float:left;}
-}
