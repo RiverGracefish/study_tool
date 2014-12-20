@@ -1,8 +1,10 @@
+<div class = 'my_pad link_white'>
 <% if current_user %>
   Signed in as <%= current_user.email %>
-  <%= link_to 'Logout' , logout_path, method: :delete %>
-  <%= link_to current_user.first_name, user_path(current_user.id) %>
+  <%= link_to 'Logout' , logout_path, method: :delete, :style => 'color: white;' %>
+  <%= link_to current_user.first_name, user_path(current_user.id), :style => 'color: white;' %>
 <% else %>
-  <%= link_to 'Signup' , new_user_path, :class => 'navbar-brand' %>
-  <%= link_to 'Login' , login_path, :class => 'navbar-brand' %>
+  <%= link_to 'Signup' , new_user_path, :class => 'navbar-brand', :style => 'color: white;' %>
+  <%= link_to 'Login' , login_path, :class => 'navbar-brand', :style => 'color: white;' %>
 <% end %>
+</div>
