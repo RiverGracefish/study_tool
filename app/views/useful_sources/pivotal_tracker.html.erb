@@ -53,6 +53,41 @@
 <output>Feature --New functionality</output>
 <output>Bug --Problem with existing functionality</output>
 <output>Chore --Something that needs doing that isn't a Feature or Bug</output>
-<output>Release --A release of the software you are</output>
+<output>Release --A release of the software you are creating</output>
+<h4>Requester is who is requesting the feature or found the bug</h4>
+<h4>Owner is who has taken ownership for fixing or implementing the story</h4>
+<h3>Usually leave this blank unless a member of your team has specific knowledge about the story</h3>
+<h4>Description is a detailed description of exactly what is being requested and what will need to be accomplished before this story can be accepted</h4>
+<h4>Good descriptions have steps to reproduce, or sign off requirements included</h4>
+<h4>Labels allow you to mark a story as related to a group of other stories</h4>
+<h4>Tasks are usually used by the developer to make sure they don't forget to do something while finishing this story</h4>
+<h4>Activity are notes and comments on the story. You can attach screen shots, sample date, etc.</h4>
 
-coming soon!
+<h3>Tracker Workflow</h3>
+<h4>After a story or stories are added to the Icebox, the group of developers who will work on that story should meet and go over the story requirements</h4>
+<h4>After going over the requirements, the developers will assign each Feature a point value. 1 point stories are much easier than 3 point stories.</h4>
+<h4>When a developer wants to work on something, they will check for the next story that has yet been started.</h4>
+<h4>They click <button>Start</button> to start that story, which changes the Owner field to them and the story status to <button>Started</button></h4>
+<h4>The developer would then create a branch (covered in detail later) and start working on this feature/bug</h4>
+<h4>After a developer is finished with the work for a story, they will open a Pull Request(PR) and add the PR URL as a comment on the story</h4>
+<h4>They will then click the <button>Finish</button> which shows the developer feels this story is finished</h4>
+<h4>When the PR is accepted, the story should be marked as Delivered, which sends the Requester an Email asking them to verify the story functionality</h4>
+<h4>After the Requester verifies the functionality, they have two options:</h4>
+<p>Accept: Story will be marked as accepted.</p>
+<p>Reject: 1) Story will be marked as rejected;</p>
+<p>2) Requester should add a comment specifying what caused them to reject the story.</p>
+<h4>If a story is accepted, the developer has nothing left to do for that story</h4>
+<h4>If a story is rejected, the developer should restart that story and fix the issues the Requester identified</h4>
+<p>After these changes are made, the developer should open another PR and click <button>Finish</button> just like they did the first time through.</p>
+<h4>Features and Bugs follow the workflow described</h4>
+<h4>Chores do not have a sign off state, so they are simply started, then <button>Accepted</button> when they are done</h4>
+<p>Releases only have Unstarted and Accepted states</p>
+
+<h3>Tracker Usage in Class</h3>
+<h4>You will be using Pivotal Tracker in class to keep track of your homework assignments</h4>
+<h4>Start stories in the order they are prioritized</h4>
+<h4>Finish stories as you create pull requests</h4>
+<h4>Stories should be marked as delivered once the PR is merged</h4>
+<h4>You should not mark your own stories accepted (TAs or Instructor will)</h4>
+
+
