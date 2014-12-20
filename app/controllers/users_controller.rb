@@ -28,7 +28,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    raise
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: "#{@user.first_name} was successfully updated." }
