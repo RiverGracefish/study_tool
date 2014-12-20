@@ -3267,6 +3267,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  background: blue;
 }
 .nav:before,
 .nav:after {
@@ -5905,11 +5906,9 @@ td.visible-print {
   }
 }
 
-<style type="text/css">
 table {width: 900px; height: 368px; border: 2px solid blue; cellpadding: 2px; cellspacing: 2px;}
 
 ul, li {decoration:none; list-style-type:none; padding: 0px; margin: 0px;}
 #smallmenu {display:block; font-weight:bold; float:left; color:blue; padding:2px; width:1000px;text-align:center; background-color: blue; text-decoration:none;}
 ul#smallmenu li {float:left;}
-
-</style>
+}
