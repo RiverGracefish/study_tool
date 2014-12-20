@@ -10,4 +10,16 @@ class StudyExercisesController < ApplicationController
 
   def lrthw
   end
+
+  def number_letters_and_variables
+  end
+
+  def methods_and_flow_control
+  end
+
+  def git_101
+  end
+
+  def git_102
+  end
 end

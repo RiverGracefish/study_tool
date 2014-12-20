@@ -1,0 +1,78 @@
+<h1> Learn Ruby The Hard Way </h1>
+
+<h2> How do I start? </h2>
+<p> Go to homework assignments </p>
+<!--<button>Hint</button>-->
+<output> >>cd ~/workspace/davinici_coders_*class session*_*class year*/homework_assignments </output>
+<p> Making directory lrthw_exercises </p>
+<!--<button>Hint</button>-->
+<output> >>mkdir lrthw_exercises</output>
+<p> Go into the directory </p>
+<!--<button>Hint</button>-->
+<output> >>cd lrthw_exercises</output>
+<p> Set up RVM to load version '2.1.2' for this directory </p>
+<!--<button>Hint</button>-->
+<output> >>echo '2.1.2' > .ruby-version</output>
+<p> Set up RVM to load gemsets for this directory </p>
+<!--<button>Hint</button>-->
+<output> >>echo 'lrthw_exercise' > .ruby-gemset </output>
+<p> Reload RVM setting </p>
+<!--<button>Hint</button>-->
+<output> >>cd .</output>
+<p> Load current directory in RubyMine </p>
+<!--<button>Hint</button>-->
+<output> >>mine .</output>
+<h2> How do I set up Rubocop for lrthw? </h2>
+<p> Go to Gemfile set up sources and gems, then bundle and run</p>
+<!--<button>Hint</button>-->
+<p> In RubyMine/Gemfile</p>
+<pre>
+  Source 'http://rubygems.org'
+
+  gem 'guard-rubocop'
+</pre>
+<p>Then go to Terminal, type in the following:</p>
+<pre>
+  >>bundle
+  >>guard init
+  >>guard
+</pre>
+<h2> How do I add Readme? </h2>
+<ul style="list-style: none;">
+  <li><p> In RubyMine, Comd-N, select file,</p></li>
+  <li><p> put Readme.md and click OK</p></li>
+  <li><p> In RubyMine/Readme.md, type the following:</p></li>
+  <pre> This project is the exercises I did as
+ part of reading through learn Ruby the
+ Hard Way by Zed A. Shaw.</pre>
+</ul>
+<h3> PS, Readme files explain what this project/directory is all about </h3>
+<h2> How do I Mark Down Plugin to RubyMine? </h2>
+<ul style="list-style: none;">
+  <li><p> RubyMine/Preferences/Plugins</p></li>
+  <li><p> Click the Browse Repositories button</p></li>
+  <li><p> Search for markdown</p></li>
+  <li><p> Install the Markdown plugin</p></li>
+  <li><p> Restart RubyMine when prompted</p></li>
+  <li><p> Now when you edit Markdown documents, you can see the formatted version</p></li>
+</ul>
+<h2> Let us keep it organize with different directory chapters. </h2>
+<h3> How do I add "Intro" directory? </h3>
+<ul style="list-style: none/">
+  <li><p> Click lrthw_exercises directory</p></li>
+  <li><p> Comd-N, select directory</p></li>
+  <li><p> Put Intro into the box, and click OK</p></li>
+</ul>
+<h2> Tips: for each chapter create one or more Ruby files to type the code from that chapter into. Practice make you a better coder!</h2>
+<h3> How do I name my redo files? </h3>
+<p>If your 1st time name ex1.rb, then 2nd time name it ex1_2.rb</p>
+<p>*Jason's Joke* One of my student come to me one day and show me that ex1_400.rb. I surprised how hard he work, but then he told me I just figured out this looks better when I did it the 4th times.</p>
+<h2> How do I run my code? </h2>
+<ul style="list-style: none/">
+  <li><p> In RubyMine: Open Run Menu, and Run</p>
+  <li><p> Or In RubyMine: Cmnd-Shift-F8</p>
+  <li><p> Or In Terminal, type the following:</p>
+  <li><p> >>cd ~/workspace/davinci/lrthw_exercises/chapter_1</p>
+  <li><p> >>ruby ex1.rb</p></li>
+</ul>
+<%= link_to 'You ready to try on your own? Let us do it!', 'http://learnrubythehardway.org/book/' %>

@@ -1,0 +1,90 @@
+<h1> Git 101 </h1>
+
+<h2> Git 101 </h2>
+<ul style="list-style: none;">
+  <li><h3> Git is a distributed revision control system </h3></li>
+  <li><h3> Keeps track of changes made to one or more files over time </h3></li>
+  <li><h3> Shows log messages of what changed and why </h3></li>
+  <li><h3> Allows developers to share their changes easily </h3></li>
+</ul>
+
+<h2> Git has three "areas" </h2>
+<ul style="list-style: none;">
+  <%= image_tag 'Git3areas.png' %>                    ||                      ||
+</ul>
+
+<h2> Git Workflow </h2>
+<ul style="list-style: none;">
+  <%= image_tag 'GitWorkflow.png' %>
+</ul>
+
+<h2> Git Setup </h2>
+<ul style="list-style: none">
+  <li><h3><%=  link_to 'covered the initial git setup during install fest', 'http://davinci-installfest.herokuapp.com/installfest/' %></h3></li>
+  <li><p>git help commit</p></li>
+  <li><p>git help branch</p></li>
+  <li><p>git help tag</p></li>
+</ul>
+
+<h2> Additional Git References </h2>
+<ul style="list-style: none">
+  <li><h4><%= link_to 'http://git-scm.com/book', 'http://git-scm.com/book' %></h4></li>
+  <li><h4><%= link_to 'Pragmatic Guide to Git', 'http://it-ebooks.info/book/45/'  %></h4></li>
+  <li><h4><%= link_to 'Pragmatic Version Control Using Git', 'http://it-ebooks.info/book/53/'  %></h4></li>
+  <li><h4><%= link_to 'Version Control with Git, 2nd Edition', 'http://it-ebooks.info/book/919/'  %></h4></li>
+  <li><h4><%= link_to 'Git Pocket Guide', 'http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=git+pocket+guide'  %></h4></li>
+</ul>
+
+<h2> Getting Started</h2>
+<ul style="list-style: none">
+  <li><h4> >>cd ~/workspace/davinci_coders_*class session*_*class year*/in_class_projects</h4></li>
+  <li><h4> >>mkdir git_practice</h4></li>
+  <li><h4> >>cd git_practice</h4></li>
+  <li><h4> >>git init</h4></li>
+  <li><h4> >>echo "Hello" > README</h4></li>
+  <li><h4> >>git status    #==> hey Git, what's your status?</h4></li>
+</ul>
+
+<h2> Tell Git to add the file to the Stage </h2>
+<h4> >>git add README</h4>
+
+<h2> Commit! </h2>
+<h4> >>git commit -m 'Added README'</h4>
+
+<h2> Commit some more changes! </h2>
+<h4> Add another line to the README file </h4>
+<h4> Stage the change </h4>
+<h4> Commit the change </h4>
+<h4> Is there a command to see what we are committed? </h4>
+
+<h2> Working with Remote Repos</h2>
+<%= image_tag 'WorkingWithRemoteRepos.png' %>
+
+
+<h2> We Setup Github SSH Auth </h2>
+<h4> >>ssh -T git@github.com </h4>
+<h4> If this doesn't work for you, see <%= link_to 'http://davinci-installfest.herokuapp.com/installfest/create_an_ssh_key', 'http://davinci-installfest.herokuapp.com/installfest/create_an_ssh_key' %></h4>
+<h4>   and <%= link_to 'http://davinci-installfest.herokuapp.com/installfest/create_a_github_account', 'http://davinci-installfest.herokuapp.com/installfest/create_a_github_account' %> to get setup</h4>
+
+<h2> Create a new Repo </h2>
+<h4><%= link_to 'https://github.com/new', 'https://github.com/new' %></h4>
+<h4>type into <b>Repository name</b><input type="text" class="form-control" placeholder="git_practice"></h4>
+<h4>type into <b>Description</b> (optional) <input type="text" class="form-control" placeholder="Repo for practicing with Git"></h4>
+<h4>Click <button>Create repository</button></h4>
+
+<h2><b> Pushing to Github </b></h2>
+<h4>We have an existing repository locally, so we'll just run:</h4>
+<output> >>git remote add origin git@github.com:jasonnoble/git_practice.git</output>
+<output> >>git push -u origin master</output>
+<h4>Reload the browser, and voila!</h4>
+
+<h2> Commit some more changes! </h2>
+<h4>Add another line to the README file</h4>
+<h4>Stage the change</h4>
+<h4>Commit the change</h4>
+<h4>Push it!</h4>
+
+<h1> Homework </h1>
+<h3><b> Write a blog post that explains what you've learned about the Git working directory, staging area and repository.</b></h3>
+
+<h1><%= link_to 'Even More Git and Github.com, check out Git 102', git_102_path %></h1>

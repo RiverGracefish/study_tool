@@ -1,0 +1,153 @@
+<h1> Number, Letters and Variables </h1>
+
+<h2> Set Up</h2>
+<ul style="list-style: none;">
+  <li><h3> In Terminal, type the following:</h3></li>
+  <li><h3> >>cd ~/workspace/davinici_coders_*class seccsion*_*class year*/in_class_projects</h3></li>
+  <li><h3> >>mkdir numbers_letters_and_variables</h3></li>
+  <li><h3> >>cd numbers_letters_and_variables</h3></li>
+  <li><h3> >>mine .</h3></li>
+</ul>
+<h2> Ruby Review Program</h2>
+<ul style="list-style: none;">
+  <li><h3> Click on numbers_letters_and_variables in project view</h3></li>
+  <li><h3> Cmnd-N (opens new menu), select file and name it "hello_world.rb"</h3></li>
+</ul>
+<h2> Writing a Ruby Program</h2>
+<ul style="list-style: none;">
+  <li><h3> In RubyMine's hello_world.rb, type in the following: </h3></li>
+  <li><p> #!/usr/bin/env ruby</p></li>
+  <li><p>  </p></li>
+  <li><p> puts "Hello World" </p></li>
+  <li><h3> We need to make this executable</h3></li>
+  <li><p> In Terminal, type in the following: </p></li>
+  <li><p> >>chmod 755 hello_world.rb</p></li>
+  <li><h3> Execute it in the terminal</h3></li>
+  <li><p> >>./hello_world.rb</p></li>
+</ul>
+<h2> Common Errors </h2>
+<ul style="list-style: none;">
+  <li><h3>bash:./hello_world.rb: Permission denied</h3></li>
+  <li><p>You need to run chmod 755 hello_world.rb</p></li>
+  <li><h3>env: ruuby:No such file or directory</h3></li>
+  <li><p>Check the syntax of your first line</p></li>
+  <li><h3>./hello_world.rb:3: undefined method 'putjs' for main:Object(NoMethodError)</h3></li>
+  <li><p>You have a syntax error on linke 3</p></li>
+</ul>
+<h2> Let us play with numbers in IRB </h2>
+<ul style="list-style: none;">
+  <li><h3> In your terminal, type in the following: </h3></li>
+  <li><p>>>irb </p></li>
+  <li><p> >>3 + 3</p></li>
+  <li><p> =>6</p></li>
+  <li><h3> IRB is an interactive ruby shell</h3></li>
+  <li><h3> You can type ruby code in and it is immediately evaluated and the result is printed </h3></li>
+</ul>
+<h2> IRB Practices</h2>
+<ul style="list-style: none;">
+  <li><h3> How many hours are there in a year? </h3></li>
+  <li><p>>>365 * 24 </p></li>
+  <li><p> =>8760</p></li>
+  <li><h3> How many seconds are there in a day? </h3></li>
+  <li><p>>>24 * 60</p></li>
+  <li><p> =>86400</p></li>
+  <li><h3> How many minutes are there in a week? </h3></li>
+  <li><p>>>60 * 24 * 7</p></li>
+  <li><p> =>10080</p></li>
+  <li><h3> Exercise: How old are you in seconds?</h3></li>
+  <li><h2> You can use +,-,*,/ and %</h2></li>
+  <li><p>>>10/5 </p></li>
+  <li><p> =>2 </p></li>
+  <li><p>>>5/2 </p></li>
+  <li><p> =>2 #(integer division) </p></li>
+  <li><p>>>5%2 </p></li>
+  <li><p> =>1 #(integer modulus/remainder) </p></li>
+  <li><p>>>5.0/2 </p></li>
+  <li><p> =>2.5 #(floating point division) </p></li>
+  <li><p>>>5 + 7 </p></li>
+  <li><p> =>12 </p></li>
+  <li><p>>>11 - 7 </p></li>
+  <li><p> =>4 </p></li>
+</ul>
+<h2> Variables</h2>
+<ul style="list-style: none;">
+  <li><h3> Variables allow you to store values</h3></li>
+  <li><p> my_age = 29</p></li>
+  <li><p> number_of_seconds_in_minute = 60</p></li>
+  <li><p> num_sec_in_min = 60</p></li>
+    <li><p> *which is better? Why?</p></li>
+
+  <li><h3> Must start with a letter or underscore</h3></li>
+</ul>
+<h2> Letters </h2>
+<ul style="list-style: none;">
+  <li><h3> Letters and Strings in Ruby are surrounded with "(double quote)" or '(single quote)'</h3></li>
+  <li><h3> Single quote strings are not evaluated</h3></li>
+  <li><h3> apple = "A is for Apple"</h3></li>
+  <li><h3> banana = "B is for Banana"</h3></li>
+</ul>
+<h2> Putting Strings together </h2>
+<ul style="list-style: none;">
+  <li><h3> "fire" + "person"    #=> "fireperson"</h3></li>
+  <li><h3> "fire" * 4    #=> "firefirefirefire"</h3></li>
+  <li><h3> Numbers are not strings, strings are not numbers</h3></li>
+  <li><p> 12 + "12"    #=> TypeError:String can't be coerced into Fixnum</p></li>
+  <li><p> "12" + 12    #=> TypeError:no implicit conversion of Fixnum into String</p></li>
+  <li><h3> How do we make it work? </h3></li>
+  <li><p> to_s (to string)</p></li>
+  <li><p> to_i (to integer)</p></li>
+  <li><p> to_f (to float)</p></li>
+  <li><h3> 5.to_s    #=> "5"</h3></li>
+  <li><h3> 5.to_i    #=> 5</h3></li>
+  <li><h3> 5.to_f    #=> 5.0</h3></li>
+  <li><h3> puts calls.to_s on the argument before printing it</h3></li>
+</ul>
+<h2> String Interpolation </h2>
+<ul style="list-style: none;">
+  <li><h3> name = "Bob" </h3></li>
+  <li><h3> "His name is #{name}"    #=> His Name is Bob</h3></li>
+  <li><h3> 'His name is #{name}'    #=> His Name is #{name}</h3></li>
+  <li><p> Double quoted strings interpolate, single quoted strings do not interpolate. </p></li>
+</ul>
+
+<h1> Homework!!!! </h1>
+<ul style="list-style: none;">
+  <li><h3> http://github.com/new </h3></li>
+  <li><h3> create a repo: </h3></li>
+  <li><h3> Repository Name: homework_assignments </h3></li>
+  <li><h3> Description: Homework assignments for Building the Toolbelt of a Junior Ruby on Rails developer class I took in 2014 </h3></li>
+  <li><h3> Public </h3></li>
+  <li><h3> Click "Initialize this repository with a README" </h3></li>
+  <li><h3> Click Create </h3></li>
+  <li><h3> Go to Setting ==> Collaborators and add jasonnoble </h3></li>
+  <li><h3> In Terminal, type in the following:</h3></li>
+  <li><p> >>cd ~/workspace/davinci_coders_*class session*_*class year*/homework_assignments </p></li>
+  <li><p> >>git clone git@github.com:YOURUSERNAME/homework_assignments</p></li>
+  <li><p> >>cd homework_assignments</p></li>
+  <li><p> >>mine .</p></li>
+  <li><h3> Make a directory called numbers_letters_and_variables</h3></li>
+</ul>
+
+<h2> Homework #1 </h2>
+<ul style="list-style: none;">
+  <li><h3> Create a file "hello_world.rb" that when run simply prints out the string "Hello World" </h3></li>
+</ul>
+
+<h2> Homework #2 </h2>
+<ul style="list-style: none;">
+  <li><h3> Create a file "number_of_seconds.rb" that when run prints the following output: </h3></li>
+  <pre>There are 60 seconds in a minute
+There are 60 minutes in an hour
+There are 24 hours in a day
+There are 7 days in a week
+That means there are:
+  3600 seconds in an hour,
+  86400 seconds in a day,
+  604800 seconds in a week.
+That means when you turn 20,
+you have been alive for 628992000 seconds,
+and if you make it to 100,
+you will have lived 3144960000 seconds, Make them count!</pre>
+  <li><output>Note: Please use descriptive variable names and calculate these values,
+  i.e. the following is not valid for this assignment: -puts "3600 seconds in and hour"</output></li>
+</ul>

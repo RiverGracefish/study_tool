@@ -1,11 +1,41 @@
-<h1>Welcome, Developer Students</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  <title>Study Tool Home Page</title>
 
-<h2>This is a Study Tool create by Grace River Yu,
- a DaVinici student of building the toolbelt of junior Ruby on Rails developer with Jason Noble.
- I want to help other developer students study while improving my programming skills.
- Please feel free to use my web, and give me free back. Thanks.</h2>
+  <style type="text/css">
+    table {width: 900px; height: 368px; border: 2px solid blue; cellpadding: 2px; cellspacing: 2px;}
 
-<p>Grace River Yu</p>
+    ul, li {decoration:none; list-style-type:none; padding: 0px; margin: 0px;}
+    #smallmenu {display:block; font-weight:bold; float:left; color:blue; padding:2px; width:1000px;text-align:center; background-color: blue; text-decoration:none;}
+    ul#smallmenu li {float:left;}
+
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="skiingstyles.css">
+
+
+</head>
+<body>
+<!--<div id="heading"> <img id="courage" alt="courage" src="../images/courage.jpg"-->
+                        <!--height='200'-->
+                        <!--width='1000'></header>-->
+  <h1>Welcome, Developer Students</h1>
+  <table>
+    <tbody>
+    <tr>
+      <td>
+        <p id="openpara"><h2>This is a Study Tool create by <%= link_to 'Grace River Yu', asset_path('GraceRiverYu.jpg') %>,
+          a DaVinici student of building the toolbelt of junior Ruby on Rails developer with <%= link_to 'Jason Noble', asset_path('JasonNoble.jpg') %>.
+          I want to help other developer students study while improving my programming skills.
+          Please feel free to use my web, and give me free back. Thanks.</h2></p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+<li class="active"><%= link_to 'Grace River Yu', asset_path('GraceRiverYu.jpg') %></li>
 <p>grace.yu4444@gmail.com</p>
 <a href="http://rivergracefish.wordpress.com/">Visit Grace's Wordpress!</a><br/>
 <a href="https://github.com/RiverGracefish">Visit Grace's Github!</a>
