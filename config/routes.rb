@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'useful_sources' => 'useful_sources#useful_sources'
   get 'reading_blogs' => 'useful_sources#reading_blogs'
   get 'build_my_brand' => 'useful_sources#build_my_brand'
+  get 'pivotal_tracker' => 'useful_sources#pivotal_tracker'
 
   get 'login' => 'sessions#login'
   post '/login' => 'sessions#create'

@@ -1,0 +1,15 @@
+<h1>Profile Page</h1>
+
+<pre><h3>
+First Name: <%= @user.first_name %><br/>
+Middle Name: <%= @user.middle_name %><br/>
+Last Name: <%= @user.last_name %><br/>
+Email: <%= @user.email %><br/>
+Wordpress: <%= @user.wordpress %><br/>
+Github: <%= @user.github %><br/>
+Course: <%= @user.course %><br/>
+User Type: <%= @user.user_type %><br/>
+Bio: <%= @user.bio %><br/>
+</h3></pre>
+
+<%= link_to 'Edit', edit_user_path(@user) %>

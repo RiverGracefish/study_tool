@@ -48,11 +48,15 @@
     <%= form.text_field :course %>
   </p>
   <p>
+    <%= form.label :user_type %>
+    <%= select_tag :user_type, options_for_select([['Professor', 'Professor'], ['Mentor', 'Mentor'], ['Student', 'Student']]), class: 'genForm_dropBox' %>
+  </p>
+  <p>
     <%= form.label :bio %>
     <%= form.text_area :bio %>
   </p>
   <p>
 
-    <%= form.submit 'Signup' %>
+    <%= form.submit 'Submit' %>
   </p>
 <% end %>
