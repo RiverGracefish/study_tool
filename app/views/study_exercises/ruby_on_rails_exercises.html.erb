@@ -1,9 +1,22 @@
 <h1> Ruby on Rails Exercises</h1>
-
-<%= link_to 'How do I get updated class content?', updated_content_path %><br/>
-<%= link_to 'Learn Ruby the Hard Way', lrthw_path %><br/>
-<%= link_to 'Number, Letters and Variables', number_letters_and_variables_path %><br/>
-<%= link_to 'Methods and Flow Control', methods_and_flow_control_path %><br/>
-<%= link_to 'Git 101', git_101_path %><br/>
-<%= link_to 'Git 102', git_102_path %><br/>
-
+<table>
+  <tbody>
+  <tr>
+    <% if current_user %>
+      <%= link_to 'How do I get updated class content?', updated_content_path %><br/>
+      <%= link_to 'Learn Ruby the Hard Way', lrthw_path %><br/>
+      <%= link_to 'Number, Letters and Variables', number_letters_and_variables_path %><br/>
+      <%= link_to 'Methods and Flow Control', methods_and_flow_control_path %><br/>
+      <%= link_to 'Git 101', git_101_path %><br/>
+      <%= link_to 'Git 102', git_102_path %><br/>
+    <% else %>
+        <td>
+          <p id="openpara"><h3>
+          Please <%= link_to 'Signup', new_user_path %> to check on study information,
+          or <%= link_to 'Login', login_path %> if you are current user.
+          </h3></p>
+        </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>

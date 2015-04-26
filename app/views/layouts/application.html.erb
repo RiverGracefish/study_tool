@@ -26,17 +26,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        <!--</button>-->
-        <%#= link_to "Study Tools", "#", :class => "navbar-brand" %>
       </div>
       <ul id="smallmenu" class="navbar navbar-collapse navbar-fixed-top">
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-fixed-top navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
-          <li><%= link_to 'Study Exercises', study_exercises_path %></li>
-          <li><%= link_to 'Users List', users_path %></li>
-          <li><%= link_to 'Useful Sources', useful_sources_path %></li>
-          <!--<li><a href="Events List">Contact</a></li>-->
+          <li><%= link_to 'Study Tools Home', '/', :style => 'color: white;' %></li>
+          <li><%= link_to 'Study Exercises', study_exercises_path, :style => 'color: white;' %></li>
+          <li><%= link_to 'Users List', users_path, :style => 'color: white;' %></li>
+          <li><%= link_to 'Useful Sources', useful_sources_path, :style => 'color: white;' %></li>
+          <li><%= link_to 'Coding Adventure', adventure_path, :style => 'color: white;' %></li>
+          <li><a href="https://www.davinciinstitute.com/events/" style="color: white;">Events</a></li>
           <!--<li><a href="Mentor Open Schedule">Contact</a></li>-->
           <!--<li><a href="Mentor Info">Contact</a></li>-->
           <ul id="navbar" class="nav navbar-collapse navbar-right">

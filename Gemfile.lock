@@ -230,6 +230,7 @@ DEPENDENCIES
   guard-rubocop
   jbuilder (~> 2.0)
   jquery-rails
+  launchy
   pg
   rails (= 4.1.6)
   rails_12factor

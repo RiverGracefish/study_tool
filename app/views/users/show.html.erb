@@ -12,4 +12,7 @@ User Type: <%= @user.user_type %><br/>
 Bio: <%= @user.bio %><br/>
 </h3></pre>
 
-<%= link_to 'Edit', edit_user_path(@user) %>
+<button type="button" class="btn btn-default"><%= link_to 'Edit', edit_user_path(@user) %></button>
+<br/>
+<p><h2><%= link_to '>> Start My Coding Adventure <<', adventure_start_path %></h2></p>
+<p><h2><%= link_to 'Go to Ruby on Rails Excrcises', ruby_on_rails_exercises_path %></h2></p>

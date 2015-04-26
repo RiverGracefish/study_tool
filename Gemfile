@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# DaVinci typical gems
 group :test, :darwin, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
@@ -9,6 +10,7 @@ group :test, :darwin, :development do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'capybara-screenshot'
+  gem 'launchy'
   gem 'faker'
 end
 

@@ -1,10 +1,14 @@
-<div class = 'my_pad link_white'>
 <% if current_user %>
-  Signed in as <%= current_user.email %>
-  <%= link_to 'Logout' , logout_path, method: :delete, :style => 'color: white;' %>
-  <%= link_to current_user.first_name, user_path(current_user.id), :style => 'color: white;' %>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false" style="color: white;">
+        Logged in as <%= current_user.email %><span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><%= link_to 'View Profile', user_path(current_user.id) %></li><br/>
+        <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+      </ul>
+    </li>
 <% else %>
-  <%= link_to 'Signup' , new_user_path, :class => 'navbar-brand', :style => 'color: white;' %>
-  <%= link_to 'Login' , login_path, :class => 'navbar-brand', :style => 'color: white;' %>
+    <li><%= link_to 'Signup', new_user_path, :class => 'navbar-nav', :style => 'color: white;' %></li>
+    <li><%= link_to 'Login', login_path, :class => 'navbar-nav', :style => 'color: white;' %></li>
 <% end %>
-</div>

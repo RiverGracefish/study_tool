@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  <title>Study Tool Coding Adventure Page</title>
+
+  <style type="text/css">
+      table {width: 900px; height: 368px; border: 2px solid blue; cellpadding: 2px; cellspacing: 2px;}
+
+      ul, li {decoration:none; list-style-type:none; padding: 0px; margin: 0px;}
+      #smallmenu {display:block; font-weight:bold; float:left; color:blue; padding:2px; width:1000px;text-align:center; background-color: blue; text-decoration:none;}
+      ul#smallmenu li {float:left;}
+
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="skiingstyles.css">
+
+</head>
+<body>
+
+<h1>Welcome, Developer Students</h1>
+<table>
+  <tbody>
+  <tr>
+    <% if current_user %>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <%= image_tag 'adventure_begin.jpg' %>
+            <button type="button" class="btn btn-default btn-lg"><%= link_to 'Start my Adventure', adventure_start_path %></button>
+          </a>
+        </li>
+    <% else %>
+    <td>
+      <p id="openpara"><h3>
+        Welcome to Ruby on Rails Adventure.
+        You and YOU ALONE are in charge of your coding adventure.
+        Please remember this is an adventure, anything can happen due to your coding skill.
+        Let's see how far you can go in your adventure. Good luck, and have fun!
+        <%= link_to 'Signup', new_user_path %> to start,
+        or <%= link_to 'Login', login_path %> if you are current user.
+      </h3></p>
+    </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>

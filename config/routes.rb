@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'sessions#homepage'
-  resources :users
+  resources :users,
+    path_names: { new: 'signup'}
   get 'study_exercises' => 'study_exercises#study_exercises'
   get 'ruby_on_rails_exercises' => 'study_exercises#ruby_on_rails_exercises'
   get 'updated_content' => 'study_exercises#updated_content'
@@ -15,6 +16,20 @@ Rails.application.routes.draw do
   get 'build_my_brand' => 'useful_sources#build_my_brand'
   get 'pivotal_tracker' => 'useful_sources#pivotal_tracker'
 
+  get 'adventure' => 'coding_adventure#adventure'
+  get 'adventure_paths' => 'coding_adventure#adventure_paths'
+  get 'adventure_start' => 'coding_adventure#adventure_start'
+  get 'adventure_number_1' => 'coding_adventure#adventure_number_1'
+  get 'adventure_number_2' => 'coding_adventure#adventure_number_2'
+  get 'adventure_number_3' => 'coding_adventure#adventure_number_3'
+  get 'adventure_number_4' => 'coding_adventure#adventure_number_4'
+  get 'adventure_number_5' => 'coding_adventure#adventure_number_5'
+  get 'adventure_number_6' => 'coding_adventure#adventure_number_6'
+  get 'adventure_letter_1' => 'coding_adventure#adventure_letter_1'
+  get 'adventure_letter_2' => 'coding_adventure#adventure_letter_2'
+  get 'adventure_letter_3' => 'coding_adventure#adventure_letter_3'
+  get 'adventure_letter_4' => 'coding_adventure#adventure_letter_4'
+
   get 'login' => 'sessions#login'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
@@ -23,7 +38,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'welcome#adventure_1'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
