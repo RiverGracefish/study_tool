@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to root_path,
         notice: "Welcome back #{user.first_name.titleize}"
     else
-      flash[:error] = 'Invalid username/password'
+      flash[:error] = 'Invalid email or password'
       render :login
     end
   end
